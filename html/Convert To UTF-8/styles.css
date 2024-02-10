@@ -1,0 +1,117 @@
+/* styles.css */
+
+/* Font */
+@font-face {
+  font-family: 'Fira Code';
+  src: url('fonts/FiraCode-Regular.ttf') format('truetype');
+  /* Add additional font formats if necessary */
+}
+
+/* Global Styles */
+body {
+  font-family: 'Fira Code', monospace;
+  font-variant-ligatures: common-ligatures; /* or use 'contextual' */
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Light Mode */
+.light-mode {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.light-mode label {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.light-mode label:hover {
+  background-color: #e5e5e5;
+}
+
+.light-mode input[type="file"] {
+  display: none;
+}
+
+.light-mode button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.light-mode button:hover {
+  background-color: #0056b3;
+}
+
+/* File List */
+#fileList {
+  margin-top: 20px;
+}
+
+#fileList p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#fileList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#fileList li {
+  margin-bottom: 5px;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode label {
+  background-color: #555;
+  color: #fff;
+}
+
+.dark-mode label:hover {
+  background-color: #444;
+}
+
+.dark-mode button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.dark-mode button:hover {
+  background-color: #0056b3;
+}
+
+.dark-mode #fileList p {
+  color: #fff;
+}
+
+.dark-mode #fileList li {
+  color: #bbb;
+}
