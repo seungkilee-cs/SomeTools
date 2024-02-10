@@ -7,6 +7,12 @@ if [ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1; then
     # Get the current timestamp
     timestamp=$(date +"%Y-%m-%d_%H_%M_%S")
 
+    # Check if there are any changes that have not been staged
+    if [ -z "$(git status --porcelain)" ]; then
+        echo "No new changes to commit. Exiting."
+        exit 1
+    fi
+
     # Prompt the user for a commit message
     read -p "Enter commit message: " commit_message
 
@@ -15,12 +21,6 @@ if [ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1; then
         commit_message="autodeploy-$timestamp"
     else
         commit_message="$commit_message-$timestamp"
-    fi
-
-    # Check if there are any new changes
-    if git diff-index --quiet HEAD --; then
-        echo "No new changes to commit. Exiting."
-        exit 1
     fi
 
     # Add all changes to git
