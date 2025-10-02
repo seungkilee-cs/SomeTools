@@ -1,19 +1,8 @@
-:root {
-  --tool-bg: #f9fafb;
-  --tool-border: #d0d7de;
-  --tool-text: #111827;
-  --tool-muted: #6b7280;
-  --tool-primary: #2563eb;
-  --tool-primary-hover: #1d4ed8;
-  --tool-success: #059669;
-  --tool-error: #dc2626;
-}
-
 body.tool-page {
   font-family: 'Fira Code', monospace;
   margin: 0;
-  background-color: var(--tool-bg);
-  color: var(--tool-text);
+  background-color: #f9fafb;
+  color: #111827;
 }
 
 .tool-header {
@@ -21,7 +10,7 @@ body.tool-page {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
-  border-bottom: 1px solid var(--tool-border);
+  border-bottom: 1px solid #d0d7de;
 }
 
 .tool-main {
@@ -33,23 +22,13 @@ body.tool-page {
   gap: 2rem;
 }
 
-.tool-link {
-  color: var(--tool-primary);
-  text-decoration: none;
-}
-
-.tool-link:hover,
-.tool-link:focus {
-  text-decoration: underline;
-}
-
 .intro p {
   margin: 0.75rem 0;
   line-height: 1.6;
 }
 
 .note {
-  color: var(--tool-muted);
+  color: #6b7280;
   font-size: 0.85rem;
 }
 
@@ -62,7 +41,7 @@ body.tool-page {
 .button {
   padding: 0.65rem 1.25rem;
   border-radius: 8px;
-  border: 1px solid var(--tool-border);
+  border: 1px solid #d0d7de;
   background-color: #fff;
   cursor: pointer;
   font-family: inherit;
@@ -78,24 +57,24 @@ body.tool-page {
 .button:hover:not([disabled]),
 .button:focus-visible:not([disabled]) {
   background-color: #f3f4f6;
-  border-color: var(--tool-primary);
+  border-color: #2563eb;
 }
 
 .button--primary {
-  background-color: var(--tool-primary);
-  border-color: var(--tool-primary);
+  background-color: #2563eb;
+  border-color: #2563eb;
   color: #fff;
 }
 
 .button--primary:hover:not([disabled]),
 .button--primary:focus-visible:not([disabled]) {
-  background-color: var(--tool-primary-hover);
+  background-color: #1d4ed8;
 }
 
 .selection,
 .results {
   background-color: #fff;
-  border: 1px solid var(--tool-border);
+  border: 1px solid #d0d7de;
   border-radius: 12px;
   padding: 1.5rem;
 }
@@ -114,11 +93,11 @@ body.tool-page {
 }
 
 .results__success {
-  color: var(--tool-success);
+  color: #059669;
 }
 
 .results__error {
-  color: var(--tool-error);
+  color: #dc2626;
 }
 
 @font-face {

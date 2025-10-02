@@ -1,7 +1,6 @@
 const fileInput = document.getElementById("fileInput");
-const convertButton = document.querySelector("button");
+const convertButton = document.getElementById("convertButton");
 const fileListDiv = document.getElementById("fileList");
-const themeToggle = document.getElementById("themeToggle");
 
 fileInput.addEventListener("change", function () {
   convertButton.disabled = fileInput.files.length === 0;
@@ -79,14 +78,7 @@ function addSuffixToFileName(fileName, suffix) {
 }
 
 function downloadFile(file) {
-  const downloadLink = document.createElement("a");
   downloadLink.href = URL.createObjectURL(file);
   downloadLink.download = file.name;
   downloadLink.click();
-}
-
-function toggleTheme() {
-  const body = document.body;
-  body.classList.toggle("dark-mode");
-  body.classList.toggle("light-mode");
 }

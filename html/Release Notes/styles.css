@@ -1,17 +1,8 @@
-:root {
-  --tool-bg: #f9fafb;
-  --tool-border: #d0d7de;
-  --tool-text: #111827;
-  --tool-muted: #6b7280;
-  --tool-primary: #2563eb;
-  --tool-shadow: rgba(15, 23, 42, 0.08);
-}
-
 body.tool-page {
   font-family: 'Fira Code', monospace;
   margin: 0;
-  background-color: var(--tool-bg);
-  color: var(--tool-text);
+  background-color: #f9fafb;
+  color: #111827;
 }
 
 .tool-header {
@@ -19,7 +10,7 @@ body.tool-page {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
-  border-bottom: 1px solid var(--tool-border);
+  border-bottom: 1px solid #d0d7de;
 }
 
 .tool-main {
@@ -31,35 +22,25 @@ body.tool-page {
   gap: 1.75rem;
 }
 
-.tool-link {
-  color: var(--tool-primary);
-  text-decoration: none;
-}
-
-.tool-link:hover,
-.tool-link:focus {
-  text-decoration: underline;
-}
-
 .controls {
   display: grid;
   grid-template-columns: max-content 1fr;
   gap: 0.75rem 1rem;
   align-items: center;
   background-color: #fff;
-  border: 1px solid var(--tool-border);
+  border: 1px solid #d0d7de;
   border-radius: 14px;
   padding: 1.25rem 1.5rem;
 }
 
 .controls label {
   font-size: 0.9rem;
-  color: var(--tool-muted);
+  color: #6b7280;
 }
 
 .controls select {
   border-radius: 8px;
-  border: 1px solid var(--tool-border);
+  border: 1px solid #d0d7de;
   padding: 0.6rem 0.75rem;
   font-family: inherit;
   font-size: 0.95rem;
@@ -68,18 +49,18 @@ body.tool-page {
 
 .controls select:focus {
   outline: none;
-  border-color: var(--tool-primary);
+  border-color: #2563eb;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 .status {
   min-height: 1.25rem;
-  color: var(--tool-muted);
+  color: #6b7280;
   font-size: 0.9rem;
 }
 
 .status--active {
-  color: var(--tool-primary);
+  color: #2563eb;
 }
 
 .status--error {
@@ -88,10 +69,10 @@ body.tool-page {
 
 .notes {
   background-color: #fff;
-  border: 1px solid var(--tool-border);
+  border: 1px solid #d0d7de;
   border-radius: 16px;
   padding: 2rem;
-  box-shadow: 0 30px 35px -30px var(--tool-shadow);
+  box-shadow: 0 30px 35px -30px rgba(15, 23, 42, 0.12);
   min-height: 220px;
 }
 

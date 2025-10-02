@@ -6,19 +6,22 @@
   <title>Temperature Converter</title>
   <link rel="stylesheet" href="../../styles.css">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body class="tool-page">
   <header class="tool-header">
     <h1>Temperature Converter</h1>
-    <a class="tool-link" href="../../index.html">Back to tools</a>
+    <div class="tool-header__actions">
+      <a class="tool-back-link" href="../../index.html">Back to tools</a>
+    </div>
   </header>
 
   <main class="tool-main">
-    <section class="intro">
+    <section class="tool-copy">
       <p>Enter a value in either field to convert between Fahrenheit and Celsius instantly. Precise to two decimal places.</p>
     </section>
 
-    <section class="converter">
+    <section class="converter surface-card">
       <div class="field">
         <label for="fahrenheitInput">Fahrenheit (°F)</label>
         <input id="fahrenheitInput" type="number" inputmode="decimal" autocomplete="off" placeholder="e.g. 98.6">

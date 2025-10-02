@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const root = document.documentElement;
   const cardContainer = document.querySelector(".card-container");
-  const themeCheckbox = document.getElementById("theme-checkbox");
 
   const tools = [
     {
@@ -29,24 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
       available: true,
     },
   ];
-
-  function updateTheme(isDark) {
-    if (isDark) {
-      root.classList.add("dark-theme");
-      root.classList.remove("light-theme");
-      localStorage.setItem("theme", "dark");
-    } else {
-      root.classList.add("light-theme");
-      root.classList.remove("dark-theme");
-      localStorage.setItem("theme", "light");
-    }
-  }
-
-  const storedTheme = localStorage.getItem("theme");
-  const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const useDarkTheme = storedTheme === "dark" || (!storedTheme && prefersDark);
-  updateTheme(useDarkTheme);
-  themeCheckbox.checked = useDarkTheme;
 
   tools.forEach(function (tool) {
     const card = document.createElement("div");
@@ -89,9 +69,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     cardContainer.appendChild(card);
-  });
-
-  themeCheckbox.addEventListener("change", function () {
-    updateTheme(themeCheckbox.checked);
   });
 });

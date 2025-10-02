@@ -4,27 +4,34 @@
     <title>Convert to UTF-8</title>
     <link rel="stylesheet" type="text/css" href="../../styles.css" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
-  <body class="light-mode">
+  <body class="tool-page">
     <header class="tool-header">
       <h1>Convert to UTF-8</h1>
-      <a class="tool-link" href="../../index.html">Back to tools</a>
+      <div class="tool-header__actions">
+        <a class="tool-back-link" href="../../index.html">Back to tools</a>
+      </div>
     </header>
 
     <main class="tool-main">
-      <p>Converts EUC-KR (CP949) Encoded text files to UTF-8 Encoding.</p>
-      <p>
-        Tested for txt, srt, smi files, but should work for any files with EUC-KR
-        encoding.
-      </p>
+      <section class="tool-copy">
+        <p>Converts EUC-KR (CP949) encoded text files to UTF-8 encoding.</p>
+        <p>
+          Tested for txt, srt, smi files, but should work for any files with EUC-KR
+          encoding.
+        </p>
+      </section>
 
-      <input type="file" id="fileInput" multiple />
-      <label for="fileInput">Select File(s)</label>
-      <button onclick="convertFiles()" disabled>Convert</button>
+      <section class="controls surface-card">
+        <input type="file" id="fileInput" multiple />
+        <label class="file-select-label" for="fileInput">Select File(s)</label>
+        <button id="convertButton" class="convert-button" disabled>Convert</button>
+      </section>
 
-      <div id="fileList"></div>
+      <div id="fileList" class="surface-card"></div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
