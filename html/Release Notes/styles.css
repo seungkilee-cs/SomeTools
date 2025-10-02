@@ -1,0 +1,139 @@
+:root {
+  --tool-bg: #f9fafb;
+  --tool-border: #d0d7de;
+  --tool-text: #111827;
+  --tool-muted: #6b7280;
+  --tool-primary: #2563eb;
+  --tool-shadow: rgba(15, 23, 42, 0.08);
+}
+
+body.tool-page {
+  font-family: 'Fira Code', monospace;
+  margin: 0;
+  background-color: var(--tool-bg);
+  color: var(--tool-text);
+}
+
+.tool-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--tool-border);
+}
+
+.tool-main {
+  padding: 2rem;
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.tool-link {
+  color: var(--tool-primary);
+  text-decoration: none;
+}
+
+.tool-link:hover,
+.tool-link:focus {
+  text-decoration: underline;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.75rem 1rem;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid var(--tool-border);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+}
+
+.controls label {
+  font-size: 0.9rem;
+  color: var(--tool-muted);
+}
+
+.controls select {
+  border-radius: 8px;
+  border: 1px solid var(--tool-border);
+  padding: 0.6rem 0.75rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.controls select:focus {
+  outline: none;
+  border-color: var(--tool-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.status {
+  min-height: 1.25rem;
+  color: var(--tool-muted);
+  font-size: 0.9rem;
+}
+
+.status--active {
+  color: var(--tool-primary);
+}
+
+.status--error {
+  color: #dc2626;
+}
+
+.notes {
+  background-color: #fff;
+  border: 1px solid var(--tool-border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 30px 35px -30px var(--tool-shadow);
+  min-height: 220px;
+}
+
+.notes__content h1,
+.notes__content h2,
+.notes__content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.notes__content h1:first-child,
+.notes__content h2:first-child,
+.notes__content h3:first-child {
+  margin-top: 0;
+}
+
+.notes__content p {
+  line-height: 1.7;
+  margin: 0.6rem 0;
+}
+
+.notes__content ul {
+  margin: 0.5rem 0 0.5rem 1.25rem;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.notes__content pre {
+  background-color: #111827;
+  color: #f8fafc;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.notes__content code {
+  background-color: rgba(15, 23, 42, 0.06);
+  padding: 0.15rem 0.4rem;
+  border-radius: 6px;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('../../fonts/FiraCode-Regular.ttf') format('truetype');
+}

@@ -25,7 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       name: "Release Notes",
       description: "Browse release history.",
-      available: false,
+      path: "Release Notes/index.html",
+      available: true,
     },
   ];
 

@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Fira Code';
-    src: url('fonts/FiraCode-Regular.ttf') format('truetype');
+    src: url('../../fonts/FiraCode-Regular.ttf') format('truetype');
     /* Add additional font formats if necessary */
   }
   
@@ -8,12 +8,13 @@
     font-family: 'Fira Code', monospace;
     font-variant-ligatures: common-ligatures; /* or use 'contextual' */
     background-color: #f8f8f8;
+    margin: 0;
   }
 
 .container {
     max-width: 400px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 50px 40px 40px;
     text-align: center;
     background-color: #fff;
     border-radius: 5px;
@@ -30,4 +31,18 @@ p {
     font-size: 18px;
     margin-bottom: 10px;
     color: #333;
+}
+
+.actions {
+    margin-top: 24px;
+}
+
+.actions a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.actions a:hover,
+.actions a:focus {
+    text-decoration: underline;
 }

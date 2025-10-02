@@ -3,7 +3,7 @@
 /* Font */
 @font-face {
   font-family: 'Fira Code';
-  src: url('fonts/FiraCode-Regular.ttf') format('truetype');
+  src: url('../../fonts/FiraCode-Regular.ttf') format('truetype');
   /* Add additional font formats if necessary */
 }
 
@@ -12,19 +12,39 @@ body {
   font-family: 'Fira Code', monospace;
   font-variant-ligatures: common-ligatures; /* or use 'contextual' */
   margin: 0;
-  padding: 20px;
+}
+
+.tool-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem 1rem;
+}
+
+.tool-link {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.tool-link:hover,
+.tool-link:focus {
+  text-decoration: underline;
+}
+
+.tool-main {
+  padding: 0 2rem 2.5rem;
+  max-width: 720px;
 }
 
 h1 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 20px;
+  font-size: 28px;
+  margin: 0;
 }
 
 p {
   font-size: 16px;
-  color: #666;
   margin-bottom: 10px;
+  line-height: 1.6;
 }
 
 /* Light Mode */
@@ -34,12 +54,14 @@ p {
 }
 
 .light-mode label {
+  display: inline-block;
   background-color: #fff;
   color: #333;
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  border: 1px solid #ccc;
 }
 
 .light-mode label:hover {
