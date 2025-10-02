@@ -84,12 +84,47 @@ input:checked+.slider:before {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
 .card:hover {
   transform: scale(1.05);
+}
+
+.card.card--disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+}
+
+.card.card--disabled:hover {
+  transform: none;
+}
+
+.card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.card__description {
+  font-size: 0.875rem;
+  text-align: center;
+  color: var(--text-color);
+  opacity: 0.85;
+  max-width: 240px;
+}
+
+.card__status {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-color);
+  opacity: 0.6;
 }
 
 .card-container {

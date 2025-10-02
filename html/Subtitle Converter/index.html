@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subtitle Converter</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="tool-page">
+  <header class="tool-header">
+    <h1>Subtitle Converter</h1>
+    <a class="tool-link" href="../../index.html">Back to tools</a>
+  </header>
+
+  <main class="tool-main">
+    <section class="intro">
+      <p>Upload SubRip (<code>.srt</code>) or WebVTT (<code>.vtt</code>) subtitle files. Each file will be converted to the other format and downloaded automatically.</p>
+      <p class="note">Timestamp formatting is normalized. Styling cues beyond standard text may require manual review after conversion.</p>
+    </section>
+
+    <section class="controls">
+      <input type="file" id="fileInput" accept=".srt,.vtt" multiple hidden>
+      <label class="button" for="fileInput">Select File(s)</label>
+      <button id="convertButton" class="button button--primary" disabled>Convert</button>
+    </section>
+
+    <section id="selection" class="selection" hidden>
+      <h2>Selected files</h2>
+      <ul id="selectionList"></ul>
+    </section>
+
+    <section id="results" class="results" hidden>
+      <h2>Conversion results</h2>
+      <ul id="resultsList"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

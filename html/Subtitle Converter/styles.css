@@ -1,0 +1,127 @@
+:root {
+  --tool-bg: #f9fafb;
+  --tool-border: #d0d7de;
+  --tool-text: #111827;
+  --tool-muted: #6b7280;
+  --tool-primary: #2563eb;
+  --tool-primary-hover: #1d4ed8;
+  --tool-success: #059669;
+  --tool-error: #dc2626;
+}
+
+body.tool-page {
+  font-family: 'Fira Code', monospace;
+  margin: 0;
+  background-color: var(--tool-bg);
+  color: var(--tool-text);
+}
+
+.tool-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--tool-border);
+}
+
+.tool-main {
+  padding: 2rem;
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tool-link {
+  color: var(--tool-primary);
+  text-decoration: none;
+}
+
+.tool-link:hover,
+.tool-link:focus {
+  text-decoration: underline;
+}
+
+.intro p {
+  margin: 0.75rem 0;
+  line-height: 1.6;
+}
+
+.note {
+  color: var(--tool-muted);
+  font-size: 0.85rem;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.button {
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid var(--tool-border);
+  background-color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.button:hover:not([disabled]),
+.button:focus-visible:not([disabled]) {
+  background-color: #f3f4f6;
+  border-color: var(--tool-primary);
+}
+
+.button--primary {
+  background-color: var(--tool-primary);
+  border-color: var(--tool-primary);
+  color: #fff;
+}
+
+.button--primary:hover:not([disabled]),
+.button--primary:focus-visible:not([disabled]) {
+  background-color: var(--tool-primary-hover);
+}
+
+.selection,
+.results {
+  background-color: #fff;
+  border: 1px solid var(--tool-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.selection h2,
+.results h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.selection ul,
+.results ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  line-height: 1.7;
+}
+
+.results__success {
+  color: var(--tool-success);
+}
+
+.results__error {
+  color: var(--tool-error);
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('../../fonts/FiraCode-Regular.ttf') format('truetype');
+}

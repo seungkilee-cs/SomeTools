@@ -6,19 +6,24 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body class="light-mode">
-    <h1>Convert to UTF-8</h1>
+    <header class="tool-header">
+      <h1>Convert to UTF-8</h1>
+      <a class="tool-link" href="../../index.html">Back to tools</a>
+    </header>
 
-    <p>Converts EUC-KR (CP949) Encoded text files to UTF-8 Encoding.</p>
-    <p>
-      Tested for txt, srt, smi files, but should work for any files with EUC-KR
-      encoding.
-    </p>
+    <main class="tool-main">
+      <p>Converts EUC-KR (CP949) Encoded text files to UTF-8 Encoding.</p>
+      <p>
+        Tested for txt, srt, smi files, but should work for any files with EUC-KR
+        encoding.
+      </p>
 
-    <input type="file" id="fileInput" multiple />
-    <label for="fileInput">Select File(s)</label>
-    <button onclick="convertFiles()" disabled>Convert</button>
+      <input type="file" id="fileInput" multiple />
+      <label for="fileInput">Select File(s)</label>
+      <button onclick="convertFiles()" disabled>Convert</button>
 
-    <div id="fileList"></div>
+      <div id="fileList"></div>
+    </main>
 
     <script src="script.js"></script>
   </body>

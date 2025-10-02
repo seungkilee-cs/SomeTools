@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="tool-page">
+  <header class="tool-header">
+    <h1>Temperature Converter</h1>
+    <a class="tool-link" href="../../index.html">Back to tools</a>
+  </header>
+
+  <main class="tool-main">
+    <section class="intro">
+      <p>Enter a value in either field to convert between Fahrenheit and Celsius instantly. Precise to two decimal places.</p>
+    </section>
+
+    <section class="converter">
+      <div class="field">
+        <label for="fahrenheitInput">Fahrenheit (°F)</label>
+        <input id="fahrenheitInput" type="number" inputmode="decimal" autocomplete="off" placeholder="e.g. 98.6">
+      </div>
+      <div class="field">
+        <label for="celsiusInput">Celsius (°C)</label>
+        <input id="celsiusInput" type="number" inputmode="decimal" autocomplete="off" placeholder="e.g. 37">
+      </div>
+    </section>
+
+    <section class="controls">
+      <button id="clearButton" class="button" type="button">Clear values</button>
+    </section>
+
+    <section id="status" class="status" aria-live="polite"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

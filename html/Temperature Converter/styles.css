@@ -1,0 +1,125 @@
+:root {
+  --tool-bg: #f9fafb;
+  --tool-border: #d0d7de;
+  --tool-text: #111827;
+  --tool-muted: #6b7280;
+  --tool-primary: #2563eb;
+  --tool-primary-hover: #1d4ed8;
+  --tool-shadow: rgba(15, 23, 42, 0.08);
+}
+
+body.tool-page {
+  font-family: 'Fira Code', monospace;
+  margin: 0;
+  background-color: var(--tool-bg);
+  color: var(--tool-text);
+}
+
+.tool-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--tool-border);
+}
+
+.tool-main {
+  padding: 2rem;
+  max-width: 640px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+.tool-link {
+  color: var(--tool-primary);
+  text-decoration: none;
+}
+
+.tool-link:hover,
+.tool-link:focus {
+  text-decoration: underline;
+}
+
+.intro p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.converter {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  background-color: #fff;
+  border: 1px solid var(--tool-border);
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 20px 25px -20px var(--tool-shadow);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field label {
+  font-size: 0.9rem;
+  color: var(--tool-muted);
+}
+
+.field input {
+  border-radius: 10px;
+  border: 1px solid var(--tool-border);
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--tool-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid var(--tool-border);
+  background-color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  border-color: var(--tool-primary);
+  background-color: #f3f4f6;
+}
+
+.status {
+  min-height: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--tool-muted);
+}
+
+.status--active {
+  color: var(--tool-primary);
+}
+
+.status--error {
+  color: #dc2626;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('../../fonts/FiraCode-Regular.ttf') format('truetype');
+}
