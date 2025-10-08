@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pound to Kilogram Converter</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="tool-page">
+  <header class="tool-header">
+    <h1>Pound to Kilogram Converter</h1>
+    <div class="tool-header__actions">
+      <a class="tool-back-link" href="../../index.html">Back to tools</a>
+    </div>
+  </header>
+
+  <main class="tool-main">
+    <section class="tool-copy">
+      <p>Enter a value in either field to convert between pounds and kilograms. Precise to two decimal places.</p>
+    </section>
+
+    <section class="converter surface-card" aria-label="Pound and kilogram converter">
+      <div class="field">
+        <label for="poundsInput">Pounds (lb)</label>
+        <input id="poundsInput" type="number" inputmode="decimal" autocomplete="off" placeholder="e.g. 150">
+      </div>
+      <div class="field">
+        <label for="kilogramsInput">Kilograms (kg)</label>
+        <input id="kilogramsInput" type="number" inputmode="decimal" autocomplete="off" placeholder="e.g. 68">
+      </div>
+    </section>
+
+    <section class="controls">
+      <button id="clearButton" class="button" type="button">Clear values</button>
+    </section>
+
+    <section id="status" class="status" aria-live="polite"></section>
+  </main>
+</body>
+</html>

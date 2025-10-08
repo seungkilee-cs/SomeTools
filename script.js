@@ -21,6 +21,18 @@ document.addEventListener("DOMContentLoaded", function () {
       available: true,
     },
     {
+      name: "Pound to Kilogram Converter",
+      description: "Convert pounds and kilograms instantly.",
+      path: "Pound to Kg Converter/index.html",
+      available: true,
+    },
+    {
+      name: "Inches to Centimeter Converter",
+      description: "Convert inches and centimeters instantly.",
+      path: "Inches to Cm Converter/index.html",
+      available: true,
+    },
+    {
       name: "Release Notes",
       description: "Browse release history.",
       path: "Release Notes/index.html",
