@@ -1,22 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Some Tools</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="icon" href="assets/tools.png" type="image/png">
-  <script src="script.js" defer></script>  
+  <script src="script.js" defer></script>
 </head>
-<body>
-  <header>
-    <div class="header-content">
-      <h1>Some Tools</h1>
+<body class="landing">
+  <header class="landing-header surface-card">
+    <div class="landing-header__content">
+      <div class="landing-header__text">
+        <h1>Some Tools</h1>
+        <p>Lightweight, browser-based utilities for quick conversions, calculations, and everyday workflows.</p>
+      </div>
+      <div class="landing-header__actions">
+        <label class="landing-search" for="toolSearch">
+          <span class="sr-only">Search tools</span>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+            <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.71.71l.27.28v.79l5 5a1 1 0 0 0 1.41-1.41l-5-5Zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9Z" fill="currentColor"/>
+          </svg>
+          <input id="toolSearch" type="search" placeholder="Filter by name or description" autocomplete="off">
+        </label>
+        <span id="toolCount" class="landing-count" aria-live="polite"></span>
+      </div>
     </div>
   </header>
-  <main class="main">
-    <h5>Literally just a list of tools I used to use scripts for, written in Javascript and embedded in HTML for standalone use on the web.</h5>
-    <div class="card-container">
-      <!-- Cards will be dynamically generated here -->
-    </div>
+
+  <main class="landing-main">
+    <section class="landing-tools" aria-label="Tools">
+      <div class="card-container" role="list">
+        <!-- Cards will be dynamically generated here -->
+      </div>
+      <p id="emptyState" class="empty-state" hidden>No tools match your search. Try a different keyword.</p>
+    </section>
   </main>
 </body>
 </html>
