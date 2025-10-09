@@ -33,6 +33,24 @@ document.addEventListener("DOMContentLoaded", function () {
       available: true,
     },
     {
+      name: "Time Zone Converter",
+      description: "Convert a date and time between global time zones.",
+      path: "Time Zone Converter/index.html",
+      available: true,
+    },
+    {
+      name: "D-Day Calculator",
+      description: "Count days remaining until your target date.",
+      path: "D-Day Calculator/index.html",
+      available: true,
+    },
+    {
+      name: "Days Since Calculator",
+      description: "See how many days have passed since a past event.",
+      path: "Days Since Calculator/index.html",
+      available: true,
+    },
+    {
       name: "Release Notes",
       description: "Browse release history.",
       path: "Release Notes/index.html",

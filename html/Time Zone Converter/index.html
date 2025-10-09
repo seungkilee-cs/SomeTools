@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Zone Converter</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="tool-page">
+  <header class="tool-header">
+    <h1>Time Zone Converter</h1>
+    <div class="tool-header__actions">
+      <a class="tool-back-link" href="../../index.html">Back to tools</a>
+    </div>
+  </header>
+
+  <main class="tool-main">
+    <section class="tool-copy">
+      <p>Convert a specific date and time from one time zone to another. Handles daylight saving automatically using the IANA time zone database.</p>
+    </section>
+
+    <section class="converter surface-card" aria-label="Time zone conversion form">
+      <div class="field">
+        <label for="dateTimeInput">Date &amp; time</label>
+        <input id="dateTimeInput" type="datetime-local" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="sourceTimeZone">From time zone</label>
+        <select id="sourceTimeZone"></select>
+      </div>
+      <div class="field">
+        <label for="targetTimeZone">To time zone</label>
+        <select id="targetTimeZone"></select>
+      </div>
+      <div class="actions">
+        <button id="convertButton" class="button" type="button">Convert</button>
+        <button id="swapButton" class="button button--secondary" type="button">Swap zones</button>
+      </div>
+    </section>
+
+    <section id="resultCard" class="result surface-card" hidden>
+      <dl class="result-grid">
+        <div>
+          <dt>Source time</dt>
+          <dd id="sourceSummary"></dd>
+        </div>
+        <div>
+          <dt>Converted time</dt>
+          <dd id="targetSummary"></dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="status" class="status" aria-live="polite"></section>
+  </main>
+</body>
+</html>

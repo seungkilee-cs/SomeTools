@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Days Since Calculator</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="tool-page">
+  <header class="tool-header">
+    <h1>Days Since Calculator</h1>
+    <div class="tool-header__actions">
+      <a class="tool-back-link" href="../../index.html">Back to tools</a>
+    </div>
+  </header>
+
+  <main class="tool-main">
+    <section class="tool-copy">
+      <p>Select a past date to learn how many full days have elapsed up to today. Useful for tracking streaks, anniversaries, or project timelines.</p>
+    </section>
+
+    <section class="calculator surface-card" aria-label="Days since calculator">
+      <div class="field">
+        <label for="startDate">Start date</label>
+        <input id="startDate" type="date" autocomplete="off">
+      </div>
+      <div class="actions">
+        <button id="calculateButton" class="button" type="button">Calculate</button>
+        <button id="clearButton" class="button button--secondary" type="button">Clear</button>
+      </div>
+    </section>
+
+    <section id="resultCard" class="result surface-card" hidden>
+      <p id="resultHeading" class="result-heading"></p>
+      <p id="resultDetails" class="result-details"></p>
+    </section>
+
+    <section id="status" class="status" aria-live="polite"></section>
+  </main>
+</body>
+</html>
